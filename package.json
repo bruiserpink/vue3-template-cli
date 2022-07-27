@@ -14,7 +14,7 @@
     "efficient",
     "react"
   ],
-  "author": "walker",
+  "author": "Bruiser-pink",
   "license": "ISC",
   "engines": {
     "node": ">=8.9"
@@ -25,6 +25,7 @@
     "download-git-repo": "^2.0.0",
     "execa": "^2.0.4",
     "fs-extra": "^8.1.0",
+    "handlebars": "^4.7.7",
     "import-global": "^0.1.0",
     "inquirer": "^6.5.1",
     "lru-cache": "^5.1.1",

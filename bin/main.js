@@ -12,17 +12,6 @@ program
     require("../lib/create")(projectName, cmd);
   });
 
-program
-.command("config [value]") // config 命令
-.description("inspect and modify the config")
-.option("-g, --get <key>", "get value by key")
-.option("-s, --set <key> <value>", "set option[key] is value")
-.option("-d, --delete <key>", "delete option by key")
-.action((value, keys) => {
-  // value 可以取到 [value] 值，keys会获取到命令参数
-  console.log(value);
-});
-
 program.on("--help", function () {
   // 前后两个空行调整格式，更舒适
   console.log();
