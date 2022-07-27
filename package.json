@@ -1,10 +1,10 @@
 {
-  "name": "vue-demo-cli",
+  "name": "bp-template-cli",
   "version": "1.0.0",
-  "description": "vue3+router+vuex 简洁demo",
+  "description": "vue/react简洁template",
   "main": "index.js",
   "bin": {
-    "vue3-template": "bin/main.js"
+    "bp-template": "bin/main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
