@@ -37,5 +37,8 @@
     "string.prototype.padstart": "^3.0.0",
     "valid-filename": "^3.1.0",
     "validate-npm-package-name": "^3.0.0"
+  },
+  "devDependencies": {
+    "plop": "^3.1.1"
   }
 }
