@@ -1,10 +1,10 @@
 {
   "name": "bp-template-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue/react简洁template",
   "main": "index.js",
   "bin": {
-    "bp-template": "bin/main.js"
+    "bptemp": "bin/main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
