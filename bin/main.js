@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-const program = require('commander')
-const chalk = require('chalk')
+import chalk from 'chalk'
+import program from 'commander'
+import create from '../lib/create.js'
+import createPage from '../lib/createPage.js'
 // 创建项目命令
 program
   .command("create <project-name>") // 增加创建指令
@@ -8,7 +10,7 @@ program
   .option("-f, --force", "overwrite target directory if it exists") // 强制覆盖
   .action((projectName, cmd) => {
     // 处理用户输入create 指令附加的参数
-    require("../lib/create")(projectName, cmd);
+    create(projectName, cmd);
   });
 
 // 创建page
@@ -17,7 +19,7 @@ program
   .description("create a new page") // 添加描述信息
   .action((pageName, cmd) => {
     // 处理用户输入create 指令附加的参数
-    require("../lib/createPage")(pageName, cmd);
+    createPage(pageName, cmd);
   });
 
 program.on("--help", function () {

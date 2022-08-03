@@ -1,7 +1,6 @@
-const path = require("path")
-const cwd = process.cwd()
-module.exports = plop => {
-	console.log(plop)
+import path from 'path'
+import { cwd } from 'process'
+export default plop => {
 	plop.setHelper("hump", function (text) {
 		return text.replace(text[0], text[0].toUpperCase())
 	})
@@ -15,8 +14,8 @@ module.exports = plop => {
 			},
 		],
 		actions: function (data) {
-			const pagePath = `${path.join(cwd, "/src/views/{{dashCase name}}/index.vue")}`
-			const addRouterPath = `${path.join(cwd, "/src/router/routes.ts")}`
+			const pagePath = `${path.join(cwd(), "/src/views/{{dashCase name}}/index.vue")}`
+			const addRouterPath = `${path.join(cwd(), "/src/router/routes.ts")}`
 			return [
 				{
 					type: "add",
