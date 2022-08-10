@@ -1,8 +1,8 @@
 import path from 'path'
 import { cwd } from 'process'
 export default plop => {
-	plop.setHelper("hump", function (text) {
-		return text.replace(text[0], text[0].toUpperCase())
+	plop.setHelper("dash", function (text) {
+		return text.replace(/([A-Z])/g, '-$1').toLowerCase()
 	})
 	plop.setGenerator("page", {
 		description: "生成page",
@@ -49,5 +49,8 @@ export default plop => {
 				},
 			]
 		},
+	})
+	plop.setGenerator("component", {
+		
 	})
 }
