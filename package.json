@@ -1,6 +1,6 @@
 {
   "name": "bp-template-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "vue/react简洁template",
   "main": "index.js",
   "bin": {
