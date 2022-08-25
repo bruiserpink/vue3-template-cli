@@ -30,3 +30,4 @@ TODO:
 1. 更新api(*扩展功能*)
 2. 创建store
 3. 根据配置生成children路由
+4. 解决append template 不能使用dashCase的问题
