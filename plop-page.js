@@ -31,7 +31,8 @@ export default plop => {
 	{
 		path: '/{{camelCase name}}',
 		name: '{{pascalCase name}}',
-		component: () => import('@/views/{{name}}/index.vue')
+		component: () => import('@/views/{{name}}/index.vue'),
+		meta: { title: '{{name}}', icon: '{{name}}', ruleCode: 'p{{pascalCase name}}' },
 	}
 ]`,
 				},
@@ -40,13 +41,7 @@ export default plop => {
 					path: addRouterPath,
 					pattern: /(\/\/ -- MERGE POWER ROUTER HERE --)/gi,
 					template: "  ...{{camelCase name}}Router,",
-				},
-				{
-					type: "append",
-					path: addRouterPath,
-					pattern: /(\/\/ -- MERGE BASE ROUTER HERE --)/gi,
-					template: "  ...{{camelCase name}}Router,",
-				},
+				}
 			]
 		},
 	})
