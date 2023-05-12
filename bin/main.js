@@ -27,9 +27,10 @@ program
 .command("comp <component path>") // 创建组件
 .description("create a new component")
 .option("-g, --global", "create comp in src/components") // 在公共组件目录下创建
-.action((path, cmd) => {
+.option("-c, --children", "create comp in parent path and append route config") // 创建一个路由子组件
+.action((path, options) => {
   const creator = new CompCreator()
-  creator.checkPath(path, cmd)
+  creator.checkPath(path, options)
   creator.create()
 });
 
